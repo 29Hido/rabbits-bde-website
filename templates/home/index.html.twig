@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - Accueil{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block body %}
+    <section class="home-section container-fluid bg-dark">
+        <div class="container">
+            <div class="row flex-md-row-reverse">
+                <div class="col-md-6 d-flex justify-content-center align-items-center px-5" data-aos="fade-left">
+                    <img class="img-fluid" src="{{ asset('images/undraw_video_game.svg') }}" alt="image-people-happy">
+                </div>
+                <div class="col-md-6 d-flex justify-content-center flex-column" data-aos="fade-right">
+                    <h2 class="fw-bold">👋 Bienvenue sur RabbitsTournament, une plateforme d'organisation de <span
+                                class="text-pink">tournois </span> pour les <span class="text-pink">étudiants </span>
+                        par les <span class="text-pink">étudiants </span> 😀</h2>
+                    <p class="py-3">
+                        Cette plateforme a été créée dans le but de proposer des tournois aux étudiants de l'IUT A de
+                        Villeneuve d'Ascq.
+                        Utilisez votre email universitaire pour vous <a href="{{ path('login.register') }}">inscrire</a>
+                        et constituer ou rejoindre une équipe !
+                    </p>
+                    <a class="btn btn-primary btn-lg fit-content">🏆 Parcourir les tournois</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-section home-sub-section container-fluid bg-secondary">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('images/undraw_having_fun.svg') }}" alt="image group"
+                         class="img-fluid article-image">
+                </div>
+                <div class="col-md-8 d-flex justify-content-center px-5 flex-column">
+                    <h2><i class="fa-regular fa-circle-question"></i> Qui sommes nous ?</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.
+                    </p>
+                    <p>
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                        sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                        Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                        Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
+                        words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                        classical literature, discovered the undoubtable source.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-section home-sub-section">
+        <div class="container">
+            <div class="row flex-md-row-reverse">
+                <div class="col-md-5 d-flex justify-content-center align-items-center" data-aos="zoom-in-left">
+                    <img src="{{ asset('images/undraw_game.svg') }}" alt="image group" class="img-fluid article-image">
+                </div>
+                <div class="col-md-7 icon-box-container">
+                    <h2><i class="fa-solid fa-gamepad"></i> Fonctionnement de la plateforme</h2>
+                    <div class="icon-box" data-aos="fade-up">
+                        <div class="icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h4>Rejoindre une équipe</h4>
+                        <p>Depuis notre plateforme, rejoignez ou créez une équipe pour pouvoir vous inscrire aux
+                            tournois disponibles 🔥</p>
+                    </div>
+                    <div class="icon-box" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <h4>S'inscrire à un tournoi</h4>
+                        <p>Parcourez la liste des tournois à venir et inscrivez votre équipe aux tournois qui vous font
+                            de l'oeil 👀</p>
+                    </div>
+                    <div class="icon-box" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h4>Entrainez-vous et jouez</h4>
+                        <p>Dès que le tournoi commencera le bracket sera généré, il ne vous restera plus qu'a gagner vos
+                            parties 💪🏻</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-section home-sub-section container-fluid bg-secondary">
+        <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
+            <div class="d-flex flex-column" data-aos="fade-right">
+                <h2><i class="fa-solid fa-heart"></i> Nos partenaires</h2>
+                <div class="partenaires d-flex flex-column flex-md-row">
+                    <img src="{{ asset('images/partenaires/votrelogoici.png') }}" class="img-fluid">
+                    <img src="{{ asset('images/partenaires/votrelogoici.png') }}" class="img-fluid">
+                    <img src="{{ asset('images/partenaires/votrelogoici.png') }}" class="img-fluid">
+                    <img src="{{ asset('images/partenaires/votrelogoici.png') }}" class="img-fluid">
+                    <img src="{{ asset('images/partenaires/votrelogoici.png') }}" class="img-fluid">
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <a class="btn btn-outline-primary btn-lg" href="mailto:hidoyatmz@gmail.com">Devenir partenaire</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

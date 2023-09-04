@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
+
+/* Couleurs */
+$cyan:            #8be9fd;
+$green:           #50fa7b;
+$orange:          #ffb86c;
+$pink:            #ff79c6;
+$purple:          #bd93f9;
+$red:             #ff5555;
+$yellow:          #f1fa8c;
+
+/* Palette */
+$mdt-background:  #282a36;
+$mdt-background-darker: #1F2029;
+$mdt-footer-darker: #191A22;
+$mdt-secondary:   #44475a;
+$mdt-comments:     #6272a4;
+$mdt-comments-opacity: rgba(98, 114, 164, 0.5);
+$mdt-foreground:  #f8f8f2;
+
+/* Bootstrap override */
+$primary:       $pink;
+$border: rgba(255, 121, 198, 0.3);
+$secondary:     $mdt-secondary;
+$light:         $mdt-foreground;
+$dark:          $mdt-background;
+$darker:        $mdt-background-darker;
+
+/* Utils */
+$discord: #7289DA;
+$lol: #FFDC00;
+$csgo: #ccba7c;
+$battle-net: #009AE4;
+$rocketl-eague: #51afe8;
+$valorant: #fa4454;

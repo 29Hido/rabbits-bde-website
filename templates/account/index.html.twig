@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - Profil de {{ user }}{% endblock %}
+
+{% block body %}
+<div class="container py-3">
+    <h1>👋 Bon retour, {{ user }}</h1>
+    <ul>
+        <li>Email : {{ user.email }}</li>
+        <li>Pseudo : {{ user }}</li>
+        <li>Roles : {{ user.rolesToString }}</li>
+        <li>Equipes : {{ user.teamToString|raw }}</li>
+    </ul>
+    {% if(user.getOwnTeam) %}
+        <p>Votre équipe : <a href="{{ path('team.view', { id: user.getOwnTeam.id }) }}">{{ user.getOwnTeam }}</a></p>
+    {% else %}
+        <a href="{{ path('team.create') }}" class="btn btn-primary my-2">Créer une équipe</a>
+    {% endif %}
+    <h2>Vos invitations :</h2>
+    <div class="row">
+        {% for invitation in invitations %}
+            <div class="col-md-4 p-3 custom-card">
+                <p>Vous avez été invité à rejoindre <a href="{{ path('team.view', {id: invitation.team.id}) }}">{{ invitation.team }}</a></p>
+                <p>Invité par :  {{ invitation.team.captain.username }} le {{ invitation.creationDate|date("m/d/Y") }}</p>
+                {{ invitation.getAcceptLink|raw }}
+                {{ invitation.getDeclineLink|raw }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

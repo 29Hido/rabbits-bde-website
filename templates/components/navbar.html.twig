@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container navbar-container">
+        <a class="navbar-brand" href="#">RabbitsTournament</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-rss"></i> Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('tournament.list') }}"><i class="fa-solid fa-trophy"></i> Tournois</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('team.list') }}"><i class="fa-sharp fa-solid fa-people-group"></i> Equipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.twitch.tv/bde_rabbits" target="_blank"><i class="fa-brands fa-twitch"></i> Live</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <li class="nav-item dropdown text-light">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ app.user.username }}
+                        </a>
+                        <ul class="dropdown-menu bg-secondary">
+                            <li><a class="dropdown-item" href="{{ path('account.index') }}"><i class="fa-solid fa-user"></i> Mon compte</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-people-group"></i> Mes équipes</a></li>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{ path('admin') }}" target="_blank"><i class="fa-solid fa-user-shield"></i> Administration</a></li>
+                            {% endif %}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ path('login.logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Deconnexion</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('login.index') }}"><i class="fa-solid fa-right-to-bracket"></i> Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('login.register') }}"><i class="fa-solid fa-user"></i> S'inscrire</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

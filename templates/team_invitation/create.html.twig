@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - Invitation team{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('forms') }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="form-title">Inviter à rejoindre {{ team.name }}</h1>
+    <div class="container form-container my-5">
+        {{ form(form) }}
+    </div>
+{% endblock %}

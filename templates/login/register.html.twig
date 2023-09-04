@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - Inscription{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('forms') }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="form-title">S'inscrire</h1>
+    <div class="container d-flex justify-content-center align-items-center flex-column mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="form-container">
+        {{ form_start(form) }}
+            <div class="mb-3">
+                {{ form_row(form.email) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.username) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.password.first) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.password.second) }}
+            </div>
+        {{ form_end(form) }}
+        </div>
+    <a class="btn btn-primary fit-content mt-3 discord-btn" href="https://discord.gg/wKBsuEVe" target="_blank" data-aos="fade-up" data-aos-duration="1500"><i class="fa-brands fa-discord"></i> Rejoindre notre discord</a>
+    </div>
+{% endblock %}

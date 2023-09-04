@@ -1,0 +1,42 @@
+@import "main";
+
+.form-container {
+  width: 500px;
+  background: $secondary;
+  padding: 32px !important;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 1px solid $border;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 32px !important;
+  padding: 16px 0px;
+}
+
+.discord-btn {
+  position: relative;
+  width: 500px;
+  border-color: $mdt-comments;
+  background-color: $mdt-comments;
+
+  i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.discord-btn:hover {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+@media screen and (max-width: 800px) {
+  .form-container, .discord-btn {
+    width: 100%;
+  }
+}

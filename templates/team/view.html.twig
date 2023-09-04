@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - {{ team.name }}{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2>{{ team.name }}</h2>
+        <div>
+            {% if user.isCaptain(team) %}
+                <a class="btn btn-primary" href="{{ path('team.invitation.create') }}">Inviter un utilisateur</a>
+                <a class="btn btn-primary" href="{{ path('team.roster.create', {id: team.id }) }}">Créer un roster</a>
+                <a class="btn btn-danger" href="{{ path('team.delete', {id: team.id }) }}">Dissoudre l'équipe</a>
+            {% elseif user.isInTeam(team) %}
+                <a class="btn btn-danger" href="{{ path('team.leave', {id: team.id}) }}">Quitter l'équipe</a>
+            {% endif %}
+        </div>
+    </div>
+    <p>Créée {{ team.creationDate|ago(locale='fr') }} par {{ team.captain.username }}</p>
+    <p>Membres :</p>
+    <ul>
+        {% for user in team.members %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+    <p>Rosters :</p>
+    <ul>
+        {% for roster in team.rosters %}
+            <li>{{ roster }} ({{ roster.members|join(', ') }})</li>
+        {% endfor %}
+    </ul>
+    <p>Tournois :</p>
+    <ul>
+        <div class="row">
+        {% for roster in team.rosters %}
+            {% for tournament in roster.tournaments %}
+                <div class="col-md-4">
+                    {% include('tournament/_tournament-card.html.twig') with {tournament: tournament} only %}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        </div>
+    </ul>
+</div>
+{% endblock %}

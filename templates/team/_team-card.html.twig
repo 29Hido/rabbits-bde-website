@@ -1,0 +1,4 @@
+<div class="card h-100 bg-secondary py-3 px-4">
+    <h4 class="text-center"><a href="{{ path('team.view', {id: team.id}) }}">{{ team.name }}</a></h4>
+    <p><i class="fa-solid fa-calendar"></i> Créée {{ team.creationDate|ago(locale='fr') }}</p>
+</div>

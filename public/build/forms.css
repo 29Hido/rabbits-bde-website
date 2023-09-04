@@ -1,0 +1,54 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./assets/styles/forms.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap);
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[4].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[3]!./assets/styles/forms.scss (1) ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/* Couleurs */
+/* Palette */
+/* Bootstrap override */
+/* Utils */
+.form-container {
+  width: 500px;
+  background: #44475a;
+  padding: 32px !important;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 1px solid rgba(255, 121, 198, 0.3);
+}
+
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 32px !important;
+  padding: 16px 0px;
+}
+
+.discord-btn {
+  position: relative;
+  width: 500px;
+  border-color: #6272a4;
+  background-color: #6272a4;
+}
+
+.discord-btn i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.discord-btn:hover {
+  background-color: #44475a;
+  border-color: #44475a;
+}
+
+@media screen and (max-width: 800px) {
+  .form-container, .discord-btn {
+    width: 100%;
+  }
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZm9ybXMuY3NzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFFQTtBQVNBO0FBU0E7QUFRQTtBQzFCQTtFQUNFLFlBQVk7RUFDWixtQkRXdUI7RUNWdkIsd0JBQXdCO0VBQ3hCLGtCQUFrQjtFQUNsQiwyQ0FBMkM7RUFDM0MsMENEYytCO0FDVmpDOztBQURBO0VBQ0Usa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQiw0QkFBNEI7RUFDNUIsaUJBQWlCO0FBSW5COztBQURBO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixxQkRMd0I7RUNNeEIseUJETndCO0FDVTFCOztBQVJBO0VBT0ksa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixRQUFRO0VBQ1IsMkJBQTJCO0FBSy9COztBQURBO0VBQ0UseUJEbEJ1QjtFQ21CdkIscUJEbkJ1QjtBQ3VCekI7O0FBREE7RUFDRTtJQUNFLFdBQVc7RUFJYjtBQUNGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vYXNzZXRzL3N0eWxlcy9tYWluLnNjc3MiLCJ3ZWJwYWNrOi8vLy4vYXNzZXRzL3N0eWxlcy9mb3Jtcy5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PU51bml0bzp3Z2h0QDIwMDs0MDAmZGlzcGxheT1zd2FwJyk7XG5cbi8qIENvdWxldXJzICovXG4kY3lhbjogICAgICAgICAgICAjOGJlOWZkO1xuJGdyZWVuOiAgICAgICAgICAgIzUwZmE3YjtcbiRvcmFuZ2U6ICAgICAgICAgICNmZmI4NmM7XG4kcGluazogICAgICAgICAgICAjZmY3OWM2O1xuJHB1cnBsZTogICAgICAgICAgI2JkOTNmOTtcbiRyZWQ6ICAgICAgICAgICAgICNmZjU1NTU7XG4keWVsbG93OiAgICAgICAgICAjZjFmYThjO1xuXG4vKiBQYWxldHRlICovXG4kbWR0LWJhY2tncm91bmQ6ICAjMjgyYTM2O1xuJG1kdC1iYWNrZ3JvdW5kLWRhcmtlcjogIzFGMjAyOTtcbiRtZHQtZm9vdGVyLWRhcmtlcjogIzE5MUEyMjtcbiRtZHQtc2Vjb25kYXJ5OiAgICM0NDQ3NWE7XG4kbWR0LWNvbW1lbnRzOiAgICAgIzYyNzJhNDtcbiRtZHQtY29tbWVudHMtb3BhY2l0eTogcmdiYSg5OCwgMTE0LCAxNjQsIDAuNSk7XG4kbWR0LWZvcmVncm91bmQ6ICAjZjhmOGYyO1xuXG4vKiBCb290c3RyYXAgb3ZlcnJpZGUgKi9cbiRwcmltYXJ5OiAgICAgICAkcGluaztcbiRib3JkZXI6IHJnYmEoMjU1LCAxMjEsIDE5OCwgMC4zKTtcbiRzZWNvbmRhcnk6ICAgICAkbWR0LXNlY29uZGFyeTtcbiRsaWdodDogICAgICAgICAkbWR0LWZvcmVncm91bmQ7XG4kZGFyazogICAgICAgICAgJG1kdC1iYWNrZ3JvdW5kO1xuJGRhcmtlcjogICAgICAgICRtZHQtYmFja2dyb3VuZC1kYXJrZXI7XG5cbi8qIFV0aWxzICovXG4kZGlzY29yZDogIzcyODlEQTtcbiRsb2w6ICNGRkRDMDA7XG4kY3NnbzogI2NjYmE3YztcbiRiYXR0bGUtbmV0OiAjMDA5QUU0O1xuJHJvY2tldGwtZWFndWU6ICM1MWFmZTg7XG4kdmFsb3JhbnQ6ICNmYTQ0NTQ7XG4iLCJAaW1wb3J0IFwibWFpblwiO1xuXG4uZm9ybS1jb250YWluZXIge1xuICB3aWR0aDogNTAwcHg7XG4gIGJhY2tncm91bmQ6ICRzZWNvbmRhcnk7XG4gIHBhZGRpbmc6IDMycHggIWltcG9ydGFudDtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3gtc2hhZG93OiByZ2JhKDAsIDAsIDAsIDAuMTYpIDBweCAxcHggNHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAkYm9yZGVyO1xufVxuXG4uZm9ybS10aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHBhZGRpbmctdG9wOiAzMnB4ICFpbXBvcnRhbnQ7XG4gIHBhZGRpbmc6IDE2cHggMHB4O1xufVxuXG4uZGlzY29yZC1idG4ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiA1MDBweDtcbiAgYm9yZGVyLWNvbG9yOiAkbWR0LWNvbW1lbnRzO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAkbWR0LWNvbW1lbnRzO1xuXG4gIGkge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBsZWZ0OiAxNnB4O1xuICAgIHRvcDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbiAgfVxufVxuXG4uZGlzY29yZC1idG46aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAkc2Vjb25kYXJ5O1xuICBib3JkZXItY29sb3I6ICRzZWNvbmRhcnk7XG59XG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDgwMHB4KSB7XG4gIC5mb3JtLWNvbnRhaW5lciwgLmRpc2NvcmQtYnRuIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxufSJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/

@@ -1,0 +1,11 @@
+{
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/forms.css": "/build/forms.css",
+  "build/forms.js": "/build/forms.js",
+  "build/home.css": "/build/home.css",
+  "build/home.js": "/build/home.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-72ae14.css": "/build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-72ae14.css",
+  "build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-72ae14.js": "/build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-72ae14.js"
+}

@@ -1,0 +1,33 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-72ae14.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_aos_dist_aos_js-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_mod-72ae14.css",
+        "/build/app.css"
+      ]
+    },
+    "forms": {
+      "js": [
+        "/build/runtime.js",
+        "/build/forms.js"
+      ],
+      "css": [
+        "/build/forms.css"
+      ]
+    },
+    "home": {
+      "js": [
+        "/build/runtime.js",
+        "/build/home.js"
+      ],
+      "css": [
+        "/build/home.css"
+      ]
+    }
+  }
+}

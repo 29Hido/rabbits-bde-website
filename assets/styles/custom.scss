@@ -1,0 +1,59 @@
+@import "main";
+
+body {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+.dropdown-item {
+  color: $light !important;
+}
+
+.dropdown-item:hover {
+  background: $primary !important;
+}
+
+.custom-multiple-select input {
+  display: block;
+}
+
+.card {
+  border: 1px solid $border !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+.bg-darker {
+  background: $darker;
+}
+
+.bg-footer-darker {
+  background: $mdt-footer-darker;
+}
+
+.btn-danger {
+  color: $light !important;
+}
+
+.btn-primary {
+  color: $light !important;
+}
+
+.btn-outline-primary:hover {
+  color: $light !important;
+}
+
+.btn-info {
+  color: $light !important;
+}
+
+.container-fluid {
+  padding: 0px !important;
+}
+
+.text-pink {
+  color: $pink;
+}
+
+.fit-content {
+  width: fit-content;
+}

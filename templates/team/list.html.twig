@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - Liste des équipes{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+        {% for team in teams %}
+            <div class="p-2 col-md-3">
+                {% include 'team/_team-card.html.twig' with {team: team} only %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

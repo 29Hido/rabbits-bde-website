@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - Tournoi {{ tournament }}{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>{{ tournament.name }}</h2>
+            {% if(user and user.getOwnTeam) %}
+                {% if user.getOwnTeam.getRoster(tournament.game) %}
+                    {% if not tournament.hasRoster(user.getOwnTeam.getRoster(tournament.game)) %}
+                        <a class="btn btn-primary"
+                           href="{{ path('tournament.signup', {id: tournament.id }) }}">S'inscrire</a>
+                    {% else %}
+                        <a class="btn btn-danger"
+                           href="{{ path('tournament.signup', {id: tournament.id }) }}">Se désinscrire</a>
+                    {% endif %}
+                {% else %}
+                    <button class="btn btn-primary" disabled>Créez un roster
+                        pour {{ tournament.game }} pour vous inscrire
+                    </button>
+                {% endif %}
+            {% endif %}
+        </div>
+        <p>Jeu: {{ tournament.game }}</p>
+        <p>Cashprize: {{ tournament.cashprize|format_currency('EUR', locale='fr') }}</p>
+        <p>Info: {{ tournament.playersAmount }}/{{ tournament.maxUsers }} participants</p>
+        <p>Date: {{ tournament.date| date("d/m/Y H:i", "Europe/Paris") }} ({{ tournament.date|ago(locale='fr') }})</p>
+        <p>Team inscrites : </p>
+        <ul>
+        {% for roster in tournament.rosters %}
+            <li>{{ roster.team }} ( {{ roster.members|join(', ') }} )</li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

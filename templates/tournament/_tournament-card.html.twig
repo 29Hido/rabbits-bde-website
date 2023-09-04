@@ -1,0 +1,7 @@
+<div class="card h-100 bg-secondary py-3 px-4">
+    <h4 class="text-center"><a href="{{ path('tournament.view', {id: tournament.id }) }}">{{ tournament }}</a></h4>
+    <p>Jeu: {{ tournament.game }}</p>
+    <p>Cashprize: {{ tournament.cashprize|format_currency('EUR', locale='fr') }}</p>
+    <p>Info: {{ tournament.playersAmount }}/{{ tournament.maxUsers }} participants</p>
+    <p>Date: {{ tournament.date| date("d/m/Y H:i", "Europe/Paris") }} ({{ tournament.date|ago(locale='fr') }})</p>
+</div>

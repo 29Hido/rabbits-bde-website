@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabbits - Liste des tournois{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+        {% for tournament in tournaments %}
+            <div class="p-2 col-md-4">
+                {% include 'tournament/_tournament-card.html.twig' with {tournament: tournament} only %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
